@@ -53,11 +53,11 @@ body {
   }
 
   &::before {
-    background: transparent url("/src/assets/bodybg1.png") no-repeat -10% bottom / 55%;
+    background: transparent url("/assets/images/bodybg1.png") no-repeat -10% bottom / 55%;
   }
 
   &::after {
-    background: transparent url("/src/assets/bodybg2.png") no-repeat right top / 35%;
+    background: transparent url("/assets/images/bodybg2.png") no-repeat right top / 35%;
   }
 
   & > * {
