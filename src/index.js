@@ -22,14 +22,14 @@ function include(space) {
 
 // Code from https://www.lynxbee.com/javascript-display-random-image-refresh/
 const images = [
-    './assets/images/masthead/boat.png',
-    './assets/images/masthead/girl.png',
-    './assets/images/masthead/lillies.png',
-    './assets/images/masthead/river.png',
-    './assets/images/masthead/sphinx.png',
-    './assets/images/masthead/temple.png',
-    './assets/images/masthead/temple2.png',
-    './assets/images/masthead/water.png'
+    './assets/img/masthead/boat.png',
+    './assets/img/masthead/girl.png',
+    './assets/img/masthead/lillies.png',
+    './assets/img/masthead/river.png',
+    './assets/img/masthead/sphinx.png',
+    './assets/img/masthead/temple.png',
+    './assets/img/masthead/temple2.png',
+    './assets/img/masthead/water.png'
 ];
  
 window.addEventListener('DOMContentLoaded', () => {
