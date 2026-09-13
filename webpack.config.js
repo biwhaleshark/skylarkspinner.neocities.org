@@ -10,7 +10,7 @@ module.exports = {
 
   // Define output file/directory:
   output: {
-    filename: "js/main.js",
+    filename: "jsmain.js",
     path: path.resolve(__dirname, "public/assets"),
     assetModuleFilename: "assets/[path][name][ext]", // Preserve original file paths and file names for resources (images, fonts, etc.)
   },

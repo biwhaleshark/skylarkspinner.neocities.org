@@ -20,6 +20,11 @@ function include(space) {
     });
 }
 
+const tabTitle = document.title; 
+if (tabTitle !== "skylark grotto") { 
+	document.title = tabTitle + " - skylark grotto"; 
+}
+
 // Code from https://www.lynxbee.com/javascript-display-random-image-refresh/
 const images = [
     './assets/img/masthead/boat.png',
