@@ -6,7 +6,7 @@ spaceInclude = include('sidebar2');
 spaceInclude = include('footer');
 
 function include(space) {
-  fetch('./blocks/' + space + '.html')
+  fetch('/blocks/' + space + '.html')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load ' + space + '.html');
       return response.text(); // Get content as text
