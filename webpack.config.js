@@ -6,13 +6,13 @@ module.exports = {
   mode: "production",
 
   // Define entry file (which loads every other file):
-  entry: "./src/index.js",
+  entry: "./index.js",
 
   // Define output file/directory:
   output: {
-    filename: "jsmain.js",
-    path: path.resolve(__dirname, "public/assets"),
-    assetModuleFilename: "assets/[path][name][ext]", // Preserve original file paths and file names for resources (images, fonts, etc.)
+    filename: "main.js",
+    path: path.resolve(__dirname, "public/assets/"),
+    assetModuleFilename: "[path][name][ext]", // Preserve original file paths and file names for resources (images, fonts, etc.)
   },
 
   module: {
