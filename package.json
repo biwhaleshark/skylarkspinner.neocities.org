@@ -1,0 +1,15 @@
+{
+    "name": "skylark-spinner-neocities",
+    "private": true,
+    "scripts": {
+        "build": "npx @11ty/eleventy"
+    },
+    "devDependencies": {
+        "css-loader": "^7.1.5",
+        "mini-css-extract-plugin": "^2.10.2",
+        "sass": "^1.104.1",
+        "sass-loader": "^17.0.1",
+        "webpack": "^5.110.3",
+        "webpack-cli": "^7.2.3"
+    }
+}
