@@ -1,0 +1,347 @@
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Settings */
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+
+  --ltpurple: #5b5a8d;
+  --dkpurple: #090c1b;
+
+  --font-family-primary: "Poiret One", sans-serif;
+  --font-family-secondary: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+html {
+  background-color: var(--dkpurple);
+}
+
+html,
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+body {
+  --body-bg: var(--ltpurple);
+
+  background-color: var(--body-bg);
+  background: linear-gradient(0deg, var(--dkpurple), var(--ltpurple));
+  color: contrast-color(var(--body-bg));
+  max-width: 100vw;
+  margin: 0;
+  font-family: var(--font-family-secondary);
+  position: relative;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.05;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &::before {
+    background: transparent url("/images/bodybg1.png") no-repeat -10% bottom / 55%;
+  }
+
+  &::after {
+    background: transparent url("/images/bodybg2.png") no-repeat right top / 35%;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Primary Container */
+  .primary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media only screen and (min-width: 900px) {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: auto auto;
+    }
+
+    &:not(:has(#masthead)) main {
+      grid-row-end: 3;
+    }
+
+    &:not(:has(#sidebar2-container)) main {
+      grid-column-end: 9;
+    }
+  }
+
+  @media only screen and (max-width: 899px) {
+    .primary-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #sidebar1-container {
+    @media only screen and (min-width: 900px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+
+  #main {
+    @media only screen and (min-width: 900px) {
+      grid-column-start: 3;
+      grid-column-end: 7;
+      grid-row-start: 1;
+    }
+
+    a,
+    a:link,
+    a:visited {
+      color: contrast-color(var(--main-bg));
+    }
+
+    p {
+      line-height: 1.4;
+    }
+
+    .inset {
+      margin: 1rem 2rem;
+    }
+  }
+
+  #sidebar2-container {
+    @media only screen and (min-width: 900px) {
+      grid-column-start: 7;
+      grid-column-end: 9;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    @media only screen and (max-width: 899px) {
+      display: none;
+    }
+  }
+
+  #masthead {
+    @media only screen and (min-width: 900px) {
+      grid-column-start: 3;
+      grid-column-end: 7;
+      grid-row-start: 2;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #skip-to-main {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    transform: translateY(-100px);
+  }
+
+  /* Headline Styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-primary);
+    display: block;
+    margin-block: 0.75rem;
+  }
+
+  h1 {
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.438);
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  .wrap {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding-inline: 2.5rem;
+  }
+
+  .container {
+    --main-bg: var(--dkpurple);
+
+    background-color: #181c346e;
+    color: contrast-color(var(--main-bg));
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  #masthead {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+
+/* Header */
+header {
+  font-family: var(--font-family-primary);
+  padding-block: 1rem;
+  font-size: 1.2rem;
+
+  .header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    color: contrast-color(var(--body-bg));
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: contrast-color(var(--body-bg));
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Sidebars */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  a,
+  a:link,
+  a:visited {
+    color: contrast-color(var(--main-bg));
+  }
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  color: contrast-color(var(--main-bg));
+  transition: 0.2s ease all;
+
+  &:focus,
+  &:hover {
+    font-style: italic;
+    transition: 0.2s ease all;
+  }
+}
+
+.two-column {
+  column-count: 2 !important;
+}
+
+.three-column {
+  column-count: 3 !important;
+}
+
+/* Footer */
+footer {
+  padding-block: 2rem 3rem !important;
+  font-family: var(--font-family-primary);
+
+  .site-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+
+    a,
+    a:link,
+    a:visited {
+      color: contrast-color(var(--body-bg));
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: contrast-color(var(--body-bg));
+        text-decoration: underline;
+      }
+    }
+
+    * {
+      min-width: fit-content;
+    }
+
+    hr {
+      margin: 0;
+      min-width: fit-content;
+      height: 36px;
+      flex: 1;
+      filter: hue-rotate(20deg);
+      background-image: url("https://64.media.tumblr.com/83e13d189d896cfa579da09cb04d6f1a/f4e1d61ed636f200-19/s2048x3072/4f5b37be08827ea426d213530db16938f621c25c.pnj");
+      background-size: auto 36px;
+      background-repeat: repeat-x;
+      background-position: center center;
+      border: none;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+}
+
+.scrapbook {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  & > * {
+    height: 42px;
+    margin: 4px;
+  }
+}
