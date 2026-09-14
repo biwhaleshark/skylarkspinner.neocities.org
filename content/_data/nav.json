@@ -1,0 +1,7 @@
+[
+  { "link": "/about.html", "text": "about" },
+  { "link": "/projects/overview.html", "text": "projects" },
+  { "link": "/bookshelf.html", "text": "bookshelf" },
+  { "link": "/scrapbook.html", "text": "scrapbook" },
+  { "link": "/resources/overview.html", "text": "resources" }
+]

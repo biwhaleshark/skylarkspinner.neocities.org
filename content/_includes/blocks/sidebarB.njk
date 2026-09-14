@@ -1,0 +1,18 @@
+<div class="block">
+  <h3>currently...</h3>
+
+  <h6>reading;</h6>
+  <ul>
+    {% for item in readingList %}
+      <li>● <a href="{{ item.goodreads }}" target="_blank">{{ item.title }}</a> by {{ item.author }}</li>
+    {% endfor %}
+  </ul>
+  <a href="/bookshelf.html"><img src="./img/bookshelf1.gif" alt="Check out my bookshelf"></a>
+
+  <h6>listening to;</h6>
+  <ul>
+    <li>● <a href="https://youtu.be/5uzXSnSrmBc" target="_blank">bird and the serpent</a> by interpol</li>
+  </ul>
+</div>
+
+<img src="./img/mywizard.gif" alt="Sparkling wizard summoning a green dragon">
