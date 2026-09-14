@@ -1,4 +1,10 @@
 [
-  { "date": "2026.09.13", "text": "setup webpack & static site generation in a fit of madness" },
-  { "date": "2026.09.12", "text": "general style updates. working on mobile compatibility" }
+  {
+    "date": "2026.09.13",
+    "text": "setup webpack & static site generation in a fit of madness"
+  },
+  {
+    "date": "2026.09.12",
+    "text": "general style updates. working on mobile compatibility"
+  }
 ]
