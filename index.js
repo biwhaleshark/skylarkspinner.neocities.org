@@ -1,5 +1,7 @@
 import "./main.scss"; // loads all css
 
+import { holidays } from "/js/todayHoliday";
+
 const tabTitle = document.title; 
 if (tabTitle !== "skylark grotto") { 
 	document.title = tabTitle + " ● skylark grotto"; 
