@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body>
+    <a href="#main" id="skip-to-main">Skip to main</a>
+
+    <header class="wrap">{% include 'blocks/header.njk' %}</header>
+
+    <div class="primary-container wrap">
+        {% if sidebarA %}
+            <div id="sidebarA" class="container sidebar">{% include 'blocks/sidebars/sidebarA.njk' %}</div>
+        {% endif %}
+
+        {% if sidebarB %}
+            <div id="sidebarB" class="container sidebar">{% include 'blocks/sidebars/sidebarB.njk' %}</div>
+        {% endif %}
+
+        {% if sidebarC %}
+            <div id="sidebarC" class="container sidebar">{% include 'blocks/sidebars/sidebarC.njk' %}</div>
+        {% endif %}
+        
+        {% if sidebarD %}
+            <div id="sidebarD" class="container sidebar">{% include 'blocks/sidebars/sidebarD.njk' %}</div>
+        {% endif %}
+
+        {{ content | safe }}
+
+        {% if masthead %}
+            <img alt="Drawing of ancient Egypt landscape." id="masthead">
+        {% endif %}
+
+    </div> <!-- End of Primary Container -->
+</body>
+
+<footer class="wrap">{% include 'blocks/footer.njk' %}</footer>
+
+</html>

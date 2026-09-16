@@ -1,5 +1,10 @@
 <div class="block">
   <h3>recent projects</h3>
+  <ul>
+    {% for item in recentProjects %}
+      <li><a href="{{ item.link }}">{{ item.project }} ● {{ item.posted }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
 
 <img src="{{ nesting }}/img/mywizard.gif" alt="Sparkling wizard summoning a green dragon" style="transform: rotateY(180deg);">

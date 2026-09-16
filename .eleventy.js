@@ -5,11 +5,6 @@ module.exports = function (eleventyConfig) {
   // This will stop the default behaviour of foo.html being turned into foo/index.html
   eleventyConfig.addGlobalData("permalink", "{{ page.filePathStem }}.html");
 
-  const pluginDate = require("eleventy-plugin-date");
-  module.exports = function (eleventyConfig) {
-    eleventyConfig.addPlugin(pluginDate);
-  };
-
   eleventyConfig.addTransform("htmlmin", function (content) {
     if ((this.page.outputPath || "").endsWith(".html")) {
       let minified = htmlmin.minify(content, {

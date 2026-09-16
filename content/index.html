@@ -1,9 +1,10 @@
 ---
-layout: templates/home.njk
+layout: templates/basic.njk
 title: skylark grotto
 nesting: "../"
+masthead: yes
 ---
-<h1>welcome!</h1>
+<h3>welcome!</h3>
 <p>hello, I'm cerah! I'm a SCAdian, fiber artist, and general collector of hobbies. this is where I collect all of my
   random interests- I have a lot of them! stay tuned for updates on my crafting projects, as well as media
   recommendations and other fun things</p><i class="material-icons"></i>
@@ -19,6 +20,13 @@ nesting: "../"
 <ul style="list-style-type: none;">
   {% for item in todoList %}
   <li>● {{ item.todo }}</li>
+  {% endfor %}
+</ul>
+
+<h5>recent projects</h5>
+<ul>
+  {% for item in recentProjects %}
+  <li><a href="{{ item.link }}">{{ item.project }} ● {{ item.posted }}</a></li>
   {% endfor %}
 </ul>
 </main>

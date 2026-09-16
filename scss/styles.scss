@@ -169,9 +169,18 @@ body {
     margin-block: 0.75rem;
   }
 
+  .page-title {
+    border: 2px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0%, transparent 75%);
+  }
+
   h1 {
     padding-bottom: 5px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.438);
     font-size: 2.4rem;
   }
 
@@ -282,10 +291,10 @@ ul {
   list-style-type: none;
 
   li {
-  display: block;
-  padding-blocK: 0.3rem;
-  line-height: 1.25;
-}
+    display: block;
+    padding-block: 0.3rem;
+    line-height: 1.25;
+  }
 }
 
 .two-column {
@@ -296,68 +305,61 @@ ul {
   column-count: 3 !important;
 }
 
-/* Footer */
-footer {
-  padding-block: 2rem 3rem !important;
-  font-family: var(--font-family-primary);
-
-  .site-footer {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-
-    a,
-    a:link,
-    a:visited {
-      color: contrast-color(var(--body-bg));
-      text-decoration: none;
-
-      &:hover,
-      &:focus {
-        color: contrast-color(var(--body-bg));
-        text-decoration: underline;
-      }
-    }
-
-    * {
-      min-width: fit-content;
-    }
-
-    hr {
-      margin: 0;
-      min-width: fit-content;
-      height: 36px;
-      flex: 1;
-      filter: hue-rotate(20deg);
-      background-image: url("https://64.media.tumblr.com/83e13d189d896cfa579da09cb04d6f1a/f4e1d61ed636f200-19/s2048x3072/4f5b37be08827ea426d213530db16938f621c25c.pnj");
-      background-size: auto 36px;
-      background-repeat: repeat-x;
-      background-position: center center;
-      border: none;
-    }
-
-    .footer-right {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-    }
-  }
-}
-
 .scrapbook {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
+
   & > * {
     height: 42px;
     margin: 4px;
     img {
       height: 100%;
     }
+  }
+}
+
+.thumbnail {
+  float: right;
+  width: 25%;
+}
+
+.float-left,
+.float-right {
+  margin-block: 0.5rem;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1rem;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1rem;
+}
+
+.thumbnail {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  .image {
+    flex: 1;
+    max-height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
