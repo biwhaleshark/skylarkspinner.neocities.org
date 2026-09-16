@@ -1,3 +1,6 @@
+---
+
+---
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -10,10 +13,11 @@
         <header class="wrap">{% include 'blocks/header.njk' %}</header>
   
         <div class="primary-container wrap">
-            <div id="sidebarA" class="container sidebar">{% include 'blocks/sidebars/sidebarA.njk' %}</div>
+            <div id="sidebarC" class="container sidebar">{% include 'blocks/sidebars/sidebarC.njk' %}</div>
             
             <main id="main" class="container">
                 <h1>{{ title }}</h1>
+                <h2>Posted {{ post.date }}</h2>
                 {{ content | safe }}
             </main>
         </div> <!-- End of Primary Container -->

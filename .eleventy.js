@@ -5,13 +5,9 @@ module.exports = function (eleventyConfig) {
   // This will stop the default behaviour of foo.html being turned into foo/index.html
   eleventyConfig.addGlobalData("permalink", "{{ page.filePathStem }}.html");
 
-  return {
-    // This makes sure HTML files use Nunjucks
-    htmlTemplateEngine: "njk",
-    dir: {
-      input: "content",
-      output: "public",
-    },
+  const pluginDate = require("eleventy-plugin-date");
+  module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(pluginDate);
   };
 
   eleventyConfig.addTransform("htmlmin", function (content) {
@@ -27,4 +23,13 @@ module.exports = function (eleventyConfig) {
     }
     return content;
   });
+
+  return {
+    // This makes sure HTML files use Nunjucks
+    htmlTemplateEngine: "njk",
+    dir: {
+      input: "content",
+      output: "public",
+    },
+  };
 };

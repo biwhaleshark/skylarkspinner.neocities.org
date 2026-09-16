@@ -8,12 +8,12 @@
         "watch-w": "npx webpack --watch",
         "watch": "concurrently --kill-others \"npx @11ty/eleventy --watch\" \"npx webpack --watch\"",
         "serve": "npx @11ty/eleventy --serve"
-
     },
     "devDependencies": {
         "@11ty/eleventy": "^3.1.6",
         "concurrently": "^10.0.5",
         "css-loader": "^7.1.5",
+        "eleventy-plugin-date": "^1.0.0",
         "mini-css-extract-plugin": "^2.10.2",
         "sass": "^1.104.1",
         "sass-loader": "^17.0.1",
@@ -23,5 +23,8 @@
     },
     "dependencies": {
         "html-minifier-terser": "^7.2.0"
+    },
+    "allowScripts": {
+        "eleventy-plugin-date@1.0.0": true
     }
 }
