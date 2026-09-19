@@ -16,8 +16,8 @@ header {
             }
 
             &:hover,
-            &:active,
-            &:focus {
+            &:focus,
+            &:active {
                 &:not(:first-child):before {
                     text-decoration: none !important;
                 }

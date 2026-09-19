@@ -253,7 +253,8 @@ header {
     text-decoration: none;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: contrast-color(var(--body-bg));
       text-decoration: underline;
     }
@@ -361,5 +362,32 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+hr {
+  border: 2px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0%, transparent 75%);
+}
+
+#gb-entries {
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .entry {
+    background-color: rgba(91,90,141,.3);
+    border-radius: 6px;
+    padding: 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }

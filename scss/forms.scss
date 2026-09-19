@@ -1,0 +1,40 @@
+form {
+    &#gb-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-inline: 1rem;
+
+        #gb-name,
+        #gb-message {
+            width: 100%;
+            background-color: rgba(#5b5a8d, 0.4);
+            border: 0px solid transparent;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: var(--color-white);
+            padding: 0.75rem;
+        }
+
+        button.submit {
+            align-self: flex-end;
+            font-size: 1.2rem;
+            padding: 0.5rem 0.75rem;
+            color: var(--color-white);
+            background: var(--ltpurple);
+            border: 0 solid transparent;
+            border-radius: 6px;
+            opacity: 0.4;
+            transition: 0.2s ease all;
+
+            &:hover,
+            &:focus,
+            &:active {
+                opacity: 1;
+                transition: 0.2s ease all;
+            }
+        }
+    }
+}

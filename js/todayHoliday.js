@@ -277,7 +277,7 @@ https://caminus.quest/codezone#datewidgetbox
     "09-23": "it's Celebrate Bisexuality Day!",
     "09-24": "it's World Gorilla Day!",
     "09-25": "bell hooks' birthday!",
-    "09-26": "it's World Cassowary Day! It's a freaky looking bird!",
+    "09-26": "it's World Cassowary Day!",
     "09-27": "it's World Tourism Day!",
     "09-28": "it's World Rabies Day!",
     "09-29": "it's International Day of Awareness of Food Loss and Waste! Around 17% of food is wasted worldwide!",

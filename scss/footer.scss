@@ -16,7 +16,8 @@ footer {
             text-decoration: none;
 
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
                 color: contrast-color(var(--body-bg));
                 text-decoration: underline;
             }
