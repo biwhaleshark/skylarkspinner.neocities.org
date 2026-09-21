@@ -27,7 +27,7 @@
         grid-row-end: 4;
     }
 
-        @media only screen and (max-width: 625px) {
+    @media only screen and (max-width: 625px) {
         grid-column-start: 1;
         grid-column-end: 3;
     }
@@ -53,15 +53,6 @@
         display: none;
     }
 }
-.primary-container:not(:has(#masthead)) {
-    #sidebarA,
-    #sidebarB,
-    #sidebarC,
-    #sidebarD {
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-}
 
 @media only screen and (max-width: 899px) {
     .primary-container:not(:has(#sidebarB, #sidebarD)) {
@@ -69,6 +60,16 @@
         #sidebarC {
             grid-column-start: 1;
             grid-column-end: 3;
+        }
+    }
+
+    .primary-container:not(:has(#masthead)) {
+        #sidebarA,
+        #sidebarB,
+        #sidebarC,
+        #sidebarD {
+            grid-row-start: 2;
+            grid-row-end: 3;
         }
     }
 }
