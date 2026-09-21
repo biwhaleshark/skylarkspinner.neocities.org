@@ -9,6 +9,15 @@ footer {
         justify-content: space-between;
         align-items: center;
 
+        @media only screen and (max-width: 899px) {
+            flex-direction: column;
+
+            hr {
+                min-height: 36px;
+                width: 100%;
+            }
+        }
+
         a,
         a:link,
         a:visited {

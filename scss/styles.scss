@@ -75,30 +75,21 @@ body {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: auto auto;
-    }
 
-    &:not(:has(#masthead)) main {
+          &:not(:has(#masthead)) main {
       grid-row-end: 3;
     }
 
     &:not(:has(#sidebarB)) main {
       grid-column-end: 9;
     }
+    }
   }
 
   @media only screen and (max-width: 899px) {
     .primary-container {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  #sidebarA,
-  #sidebarC {
-    @media only screen and (min-width: 900px) {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -122,18 +113,12 @@ body {
     .inset {
       margin: 1rem 2rem;
     }
-  }
-
-  #sidebarB {
-    @media only screen and (min-width: 900px) {
-      grid-column-start: 7;
-      grid-column-end: 9;
-      grid-row-start: 1;
-      grid-row-end: 3;
-    }
 
     @media only screen and (max-width: 899px) {
-      display: none;
+         grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
   }
 
@@ -142,6 +127,12 @@ body {
       grid-column-start: 3;
       grid-column-end: 7;
       grid-row-start: 2;
+    }
+    @media only screen and (max-width: 899px) {
+         grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
   }
 
@@ -225,52 +216,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 6px;
-  }
-}
-
-/* Header */
-header {
-  font-family: var(--font-family-primary);
-  padding-block: 1rem;
-  font-size: 1.2rem;
-
-  .header-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    width: 100%;
-    max-width: 150px;
-  }
-
-  a,
-  a:link,
-  a:visited {
-    color: contrast-color(var(--body-bg));
-    text-decoration: none;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: contrast-color(var(--body-bg));
-      text-decoration: underline;
-    }
-  }
-}
-
-/* Sidebars */
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  a,
-  a:link,
-  a:visited {
-    color: contrast-color(var(--main-bg));
   }
 }
 
